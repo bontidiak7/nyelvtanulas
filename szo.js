@@ -1,4 +1,4 @@
-// Egyszerűsített párosító játék, csak 10 véletlen szóval
+
 let sikeres = 0;
 let sikertelen = 0;
 let magyarValasztott = null;
