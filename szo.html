@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nyelvtanulás</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        h1 { font-size: 2.5em; margin-top: 30px; }
+        #startBtn { font-size: 1.2em; padding: 10px 30px; margin: 20px; }
+        #gameArea { display: flex; justify-content: center; gap: 50px; margin-top: 30px; }
+        .column { display: flex; flex-direction: column; align-items: center; }
+        .word-btn { margin: 5px; padding: 10px 20px; font-size: 1em; cursor: pointer; border: 1px solid #ccc; border-radius: 5px; background: #f9f9f9; }
+        .word-btn.selected { background: #cce5ff; }
+        #scoreboard { margin-top: 40px; font-size: 1.2em; }
+    </style>
 </head>
 <body>
-    
+    <h1>Nyelvtanulás</h1>
+    <button id="startBtn">Start</button>
+    <div id="gameArea" style="display:none;">
+        <div class="column" id="huColumn"></div>
+        <div class="column" id="enColumn"></div>
+    </div>
+    <div id="scoreboard" style="display:none;">
+        Sikeres próbálkozások: <span id="successCount">0</span> <br>
+        Sikertelen próbálkozások: <span id="failCount">0</span>
+    </div>
+    <script src="szavak.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
